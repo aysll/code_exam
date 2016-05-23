@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MY CAPS </title>
+	<!-- Css codes start -->
+	<style type="text/css">
+		.main{
+		width: 800px;
+		margin: 0 auto;
+
+		}
+		.yazi1{
+			height: 60px;
+			width: 800px;
+			
+			color:red;
+			margin-top: 20px;
+			text-align: left;
+		}
+		.sekil{
+			height: 400px;
+			width: 800px;
+			margin-bottom: -20px;
+			border:0 px solid;
+
+		}
+		.yazi{
+			height: 60px;
+			width: 800px;
+			background: red;
+			color:white;
+			margin-top: -10px;
+			text-align: left;
+		}
+		.textelave{
+			width: 798px;
+			height: 80px;
+			border: 2px solid black;
+			margin-top: 10px;
+			text-align: left;
+			font-size: 30px;
+			color: red;
+
+
+					}
+		.textdeyis{
+			height: 30px;
+			width: 100px;
+			background: red;
+			color: white;
+			float: right;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			border: 0px;
+			text-align: center;
+		}
+		.sekildeyis{
+			height: 30px;
+			width: 100px;
+			background: red;
+			color: white;
+			float: right;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			border: 0px;
+			text-align: center;
+		}
+		.effect{
+			margin-top: 50px;
+			width: 800px;
+
+		}
+		
+		.effect1{
+			height: 40px;
+			width: 170px;
+			background: red;
+   			display: inline-block;
+			margin-top: 50px;
+			color:white;
+		
+
+		}
+		
+		.eff{
+			display: inline-block;
+			width: 160px;
+		}
+		
+	</style>
+	<!-- Css codes end -->
+
+
+
+</head>
+
+<body>
+
+	<div class='main'>
+
+
+	<div class='yazi1'><h2>MY CAPS MAKER</h2></div>
+	<div class='sekilyazi'>
+	<div class='sekil'><img class='sekil' src='http://www.eonline.com/eol_images/Entire_Site/2015916/rs_1024x696-151016085527-1024.Angelina-Jolie-Family-Vogue.jl.101515.jpg'></div>
+	<div class='yazi'><h2 id="yaziniDeyis">Bu  yazini  deyise  bilersiniz</h2></div>
+	</div>
+   
+    <input class='textelave'  type='text' placeholder='Text elave edin'>
+
+	<div class='textdeyis'><button class='textdeyis' onclick="textdeyis()">texti deyis</button></div>
+
+	<div ><input class='textelave' type='text' placeholder='seklinlinkini eleve edin'></div>
+
+	<div class='sekildeyis'><button  class='sekildeyis' onclick="sekildeyis()">sekli deyis</button></div>
+
+	<div class='eff'><button   class='effects effect1' onclick="effect01()" >effect01</button></div>
+
+	<div class='eff'><button onclick="effect02()" class='effects effect1'>effect02</button></div>
+
+	<div class='eff'><button onclick="effect03()" class='effects effect1'>effect03</button></div>
+
+	<div class='eff'><button onclick="effect04()" class='effects effect1'>effect04</button></div>
+
+
+	</div>
+
+
+<script type="text/javascript">
+	
+	
+function textdeyis() {
+   var mytext = document.getElementsByClassName("textelave")[0].value;
+   document.getElementById("yaziniDeyis").innerHTML=mytext;
+}
+
+function sekildeyis() {
+   var mypicture = document.getElementsByClassName("textelave")[1].value;
+   console.log(mypicture);
+   document.getElementsByClassName("sekil")[1].src=mypicture;
+}
+
+// --------------------------------------------------------------------------
+a=true;
+function effect01() {
+  if (a) {
+    document.getElementsByClassName("sekil")[1].style.border="2px solid blue";
+    a=false;
+  }
+  else {
+    document.getElementsByClassName("sekil")[1].style.border="0px solid black";
+      a=true;
+  }
+}
+// -----------------------------------------------------------------------------
+b=true;
+function effect02(){
+  if (b) {
+    document.getElementsByClassName("yazi")[0].style.background="green";
+    b=false;
+  }
+  else {
+    document.getElementsByClassName("yazi")[0].style.background="red";
+      b=true;
+  }
+}
+// -------------------------------------------------------------------------------
+c=true;
+function effect03() {
+  if (c) {
+    document.getElementById("yaziniDeyis").style.fontWeight='bold';
+    c=false;
+    document.close();
+  }
+  else {
+    document.getElementById("yaziniDeyis").style.fontWeight="normal";
+      c=true;
+      document.close();
+  }
+}
+// ------------------------------------------------------------------------------
+d=true;
+function effect04(){
+
+
+  if (d) {
+    document.getElementsByClassName("yazi")[0].style.textAlign='center';
+    d=false;
+
+  }
+  else {
+    document.getElementsByClassName("yazi")[0].style.textAlign="left";
+      d=true;
+  }
+}
+
+</script>
+</body>
+
+</html>
